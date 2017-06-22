@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    min-height: 100%;
+}
+
+body {
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #ffffff;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+a, button, input {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fleft {
+    float: left;
+}
+
+.fright {
+    float: right;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+}
+
