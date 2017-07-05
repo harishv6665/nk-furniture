@@ -8,8 +8,329 @@
     <title>NK FURNITURE</title>
 
     <link rel="stylesheet" href="./stylesheets/style.css">
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript">
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 11,
+
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+                // How you would like to style the map.
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [
+                    {
+                        "featureType": "all",
+                        "stylers": [
+                            {
+                                "saturation": 0
+                            },
+                            {
+                                "hue": "#e7ecf0"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "stylers": [
+                            {
+                                "saturation": -70
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "stylers": [
+                            {
+                                "visibility": "simplified"
+                            },
+                            {
+                                "saturation": -60
+                            }
+                        ]
+                    }
+                ],
+            };
+
+            // Get the HTML DOM element that will contain your map
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
+
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            // Let's also add a marker while we're at it
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(40.6700, -73.9400),
+                map: map,
+                title: 'Snazzy!',
+            });
+        }
+    </script>
+
 </head>
 <body>
-    <div class="page-wrapper"></div>
+<div class="page-wrapper">
+
+    <header class="header clearfix">
+        <a href="#" class="header__logo fleft">NK FURNITURE</a>
+        <nav class="header__nav fright">
+            <a href="#" class="header__nav__link active">HOME</a>
+            <a href="#" class="header__nav__link">ABOUT</a>
+            <a href="#" class="header__nav__link">PRODUCTS</a>
+            <a href="#" class="header__nav__link">TESTIMONIALS</a>
+            <a href="#" class="header__nav__link">CONTACT US</a>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <ul class="banner__slider">
+            <li class="banner__slider__item">
+                <div class="banner__hero-img"></div>
+                <div class="banner__content">
+                    <h1 class="banner__content__title">WELCOME TO OUR STORE</h1>
+                    <h2 class="banner__content__sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
+                        distinctio
+                        dolores doloribus eum inventore quae saepe tempore unde vero? Aperiam ea ex expedita fugiat
+                        nihil
+                        numquam quae quia ratione voluptatum!</h2>
+                    <button class="banner__content__button">VIEW MORE</button>
+                </div>
+            </li>
+        </ul>
+
+        <nav class="banner__slider-nav">
+            <a href="#" class="banner__slider-nav__link"></a>
+            <a href="#" class="banner__slider-nav__link active"></a>
+            <a href="#" class="banner__slider-nav__link"></a>
+        </nav>
+    </div>
+
+    <div class="category">
+        <ul class="category__list">
+            <li class="category__list__item w-65per align-left">
+                <div class="category__list__item__detail">
+                    <h2 class="category__list__item__detail__title">LIVING ROOM</h2>
+                    <button class="category__list__item__detail__button">VIEW MORE</button>
+                </div>
+                <div class="category__list__item__image living-room"></div>
+            </li>
+            <li class="category__list__item w-35per align-left">
+                <div class="category__list__item__detail">
+                    <h2 class="category__list__item__detail__title">KITCHEN & DINING ROOM</h2>
+                    <button class="category__list__item__detail__button">VIEW MORE</button>
+                </div>
+                <div class="category__list__item__image kitchen"></div>
+            </li>
+            <li class="category__list__item w-50per align-right">
+                <div class="category__list__item__detail">
+                    <h2 class="category__list__item__detail__title">BEDROOM</h2>
+                    <button class="category__list__item__detail__button">VIEW MORE</button>
+                </div>
+                <div class="category__list__item__image bedroom"></div>
+            </li>
+            <li class="category__list__item w-50per align-left">
+                <div class="category__list__item__detail">
+                    <h2 class="category__list__item__detail__title">ACCESSORIES</h2>
+                    <button class="category__list__item__detail__button">VIEW MORE</button>
+                </div>
+                <div class="category__list__item__image accessories"></div>
+            </li>
+            <li class="category__list__item w-33-3per align-right">
+                <div class="category__list__item__detail">
+                    <h2 class="category__list__item__detail__title">BATHROOM</h2>
+                    <button class="category__list__item__detail__button">VIEW MORE</button>
+                </div>
+                <div class="category__list__item__image bathroom"></div>
+            </li>
+            <li class="category__list__item w-33-3per align-right">
+                <div class="category__list__item__detail">
+                    <h2 class="category__list__item__detail__title">OFFICE</h2>
+                    <button class="category__list__item__detail__button">VIEW MORE</button>
+                </div>
+                <div class="category__list__item__image office"></div>
+            </li>
+            <li class="category__list__item w-33-3per align-left">
+                <div class="category__list__item__detail">
+                    <h2 class="category__list__item__detail__title">LIGHTNING</h2>
+                    <button class="category__list__item__detail__button">VIEW MORE</button>
+                </div>
+                <div class="category__list__item__image lightning"></div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="brand">
+        <h3 class="brand__title">Our Brands</h3>
+        <h4 class="brand__sub-title">A curated collection of high-quality furniture from finest makers</h4>
+
+        <ul class="brand__list">
+            <li class="brand__list__item logo-1">
+                <div class="brand__list__item__img"></div>
+            </li>
+            <li class="brand__list__item logo-2">
+                <div class="brand__list__item__img"></div>
+            </li>
+            <li class="brand__list__item logo-3">
+                <div class="brand__list__item__img"></div>
+            </li>
+            <li class="brand__list__item logo-4">
+                <div class="brand__list__item__img"></div>
+            </li>
+            <li class="brand__list__item logo-5">
+                <div class="brand__list__item__img"></div>
+            </li>
+            <!--<li class="brand__list__item logo-6">-->
+            <!--<div class="brand__list__item__img"></div>-->
+            <!--</li>-->
+        </ul>
+
+        <nav class="brand__list-nav">
+            <a href="#" class="brand__list-nav__link"></a>
+            <a href="#" class="brand__list-nav__link active"></a>
+            <a href="#" class="brand__list-nav__link"></a>
+        </nav>
+    </div>
+
+    <div class="product">
+        <h3 class="product__title">Featured Products</h3>
+        <nav class="product__category-nav">
+            <a href="#" class="product__category-nav__link active">All Categories</a>
+            <a href="#" class="product__category-nav__link">Living Room</a>
+            <a href="#" class="product__category-nav__link">Kitchen & Dining Room</a>
+            <a href="#" class="product__category-nav__link">Bedroom</a>
+            <a href="#" class="product__category-nav__link">Accessories</a>
+            <a href="#" class="product__category-nav__link">Bathroom</a>
+            <a href="#" class="product__category-nav__link">Office</a>
+            <a href="#" class="product__category-nav__link">Lightning</a>
+        </nav>
+
+        <div class="product__view">
+            <ul class="product__view__list">
+                <li class="product__view__list__item p1">
+                    <div class="product__view__list__item__img-sec"></div>
+                    <div class="product__view__list__item__info-sec">
+                        <span class="product__view__list__item__info-sec__category">Bedroom</span>
+                        <span class="product__view__list__item__info-sec__name">Furniture Name</span>
+                        <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
+                    </div>
+                </li>
+                <li class="product__view__list__item p2">
+                    <div class="product__view__list__item__img-sec"></div>
+                    <div class="product__view__list__item__info-sec">
+                        <span class="product__view__list__item__info-sec__category">Bedroom</span>
+                        <span class="product__view__list__item__info-sec__name">Furniture Name</span>
+                        <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
+                    </div>
+                </li>
+                <li class="product__view__list__item p3">
+                    <div class="product__view__list__item__img-sec"></div>
+                    <div class="product__view__list__item__info-sec">
+                        <span class="product__view__list__item__info-sec__category">Bedroom</span>
+                        <span class="product__view__list__item__info-sec__name">Furniture Name</span>
+                        <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
+                    </div>
+                </li>
+                <li class="product__view__list__item p4">
+                    <div class="product__view__list__item__img-sec"></div>
+                    <div class="product__view__list__item__info-sec">
+                        <span class="product__view__list__item__info-sec__category">Bedroom</span>
+                        <span class="product__view__list__item__info-sec__name">Furniture Name</span>
+                        <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
+                    </div>
+                </li>
+                <li class="product__view__list__item p5">
+                    <div class="product__view__list__item__img-sec"></div>
+                    <div class="product__view__list__item__info-sec">
+                        <span class="product__view__list__item__info-sec__category">Bedroom</span>
+                        <span class="product__view__list__item__info-sec__name">Furniture Name</span>
+                        <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
+                    </div>
+                </li>
+                <li class="product__view__list__item p6">
+                    <div class="product__view__list__item__img-sec"></div>
+                    <div class="product__view__list__item__info-sec">
+                        <span class="product__view__list__item__info-sec__category">Bedroom</span>
+                        <span class="product__view__list__item__info-sec__name">Furniture Name</span>
+                        <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
+                    </div>
+                </li>
+                <li class="product__view__list__item p7">
+                    <div class="product__view__list__item__img-sec"></div>
+                    <div class="product__view__list__item__info-sec">
+                        <span class="product__view__list__item__info-sec__category">Bedroom</span>
+                        <span class="product__view__list__item__info-sec__name">Furniture Name</span>
+                        <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__col-left">
+
+            <div class="footer__card">
+                <div class="footer__card__icon"></div>
+                <div class="footer__card__content">
+                    <span class="footer__card__content__title">Call us on</span>
+                    <span class="footer__card__content__text">(+91) 9900-123-123</span>
+                </div>
+                <div class="footer__card__image wardrobe"></div>
+            </div>
+
+            <div class="footer__card">
+                <div class="footer__card__icon"></div>
+                <div class="footer__card__content">
+                    <span class="footer__card__content__title">Send a message</span>
+                    <span class="footer__card__content__text">contact@nkfurniture.com</span>
+                </div>
+                <div class="footer__card__image chair"></div>
+            </div>
+
+            <!--<div class="footer__card">-->
+            <!--<div class="footer__card__icon"></div>-->
+            <!--<div class="footer__card__content">-->
+            <!--<span class="footer__card__content__title">Visit us here</span>-->
+            <!--<span class="footer__card__content__text">#3, lorem complex, 2nd main, 80th cross, bangalore 560-034</span>-->
+            <!--</div>-->
+            <!--<div class="footer__card__image"></div>-->
+            <!--</div>-->
+
+        </div>
+        <div class="footer__col-right">
+            <div class="footer__map" id="map"></div>
+            <div class="footer__address">
+                <span class="footer__address__title">NK FURNITURE</span>
+                <p class="footer__address__text">#3, lorem complex, 2nd main, 80th cross, bangalore 560-034</p>
+            </div>
+        </div>
+    </footer>
+
+</div>
 </body>
 </html>

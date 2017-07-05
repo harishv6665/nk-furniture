@@ -1,3 +1,5 @@
+/* ::: RESET STYLES STARTS ::: */
+
 *{
     margin: 0;
     padding: 0;
@@ -12,6 +14,8 @@ body {
     font-size: 14px;
     font-weight: 400;
     background-color: #ffffff;
+    font-family: "Roboto", "sans-serif";
+    color: #333333;
 }
 
 button {
@@ -27,6 +31,15 @@ a, button, input {
 a {
     text-decoration: none;
 }
+
+li {
+    list-style: none;
+}
+
+/* ::: RESET STYLES ENDS ::: */
+
+
+/* ::: COMMON CLASSES STARTS ::: */
 
 .fleft {
     float: left;
@@ -44,3 +57,557 @@ a {
     visibility: hidden;
     max-height: 0;
 }
+
+/* ::: COMMON CLASSES ENDS ::: */
+
+
+/* ::: HEADER CLASSES STARTS HERE ::: */
+
+.header {
+    height: 85px;
+}
+
+.header__logo {
+    color: #d5b07f;
+    font-size: 30px;
+    height: 100%;
+    width: 250px;
+    padding: 26px 20px;
+}
+
+.header__nav {
+    height: 50px;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+.header__nav__link {
+    float: left;
+    height: 100%;
+    font-size: 13px;
+    margin-left: 20px;
+    padding: 16px 10px;
+    color: #333333;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    position: relative;
+}
+
+.header__nav__link.active {
+    font-weight: 800;
+    color: #d5b07f;
+}
+
+.header__nav__link:hover {
+    color: #d5b07f;
+}
+
+/* ::: HEADER CLASSES ENDS HERE ::: */
+
+
+/* ::: BANNER CLASSES STARTS HERE ::: */
+
+.banner {
+    height: 600px;
+    background: rgba(204, 204, 204, 0.2);
+    position: relative;
+}
+
+.banner__slider-nav {
+    display: none;
+}
+
+.banner__slider {
+    height: 100%;
+    width: 100%;
+}
+
+.banner__slider__item {
+    height: 100%;
+    position: relative;
+}
+
+.banner__hero-img {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: url('./../images/banner/banner-1.jpg') no-repeat;
+    background-size: cover;
+}
+
+.banner__content {
+    position: absolute;
+    left: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 700px;
+}
+
+.banner__content__title {
+    color: #d5b07f;
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 0.025em;
+}
+
+.banner__content__sub-title {
+    font-size: 17px;
+    font-weight: 100;
+    letter-spacing: 0.02em;
+    line-height: 26px;
+    padding: 20px 0 30px 0;
+}
+
+.banner__content__button {
+    width: 180px;
+    background: #7a7a7a;
+    height: 45px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.035em;
+    box-shadow: 0 0 6px 1px #bbb;
+}
+
+/* ::: BANNER CLASSES ENDS HERE ::: */
+
+
+/* ::: CATEGORY CLASSES STARTS HERE ::: */
+
+.category__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 50px;
+    justify-content: space-between;
+}
+
+.category__list__item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 250px;
+    background: #f7f7f7;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.category__list__item.w-35per {
+    width: calc(35% - 15px);
+}
+
+.category__list__item.w-33-3per {
+    width: calc((100% / 3) - 20px);
+}
+
+.category__list__item.w-50per {
+    width: calc(50% - 15px);
+}
+
+.category__list__item.w-65per {
+    width: calc(65% - 15px);
+}
+
+.category__list__item.align-left .category__list__item__detail {
+    left: 30px;
+}
+
+.category__list__item.align-right .category__list__item__detail {
+    right: 30px;
+}
+
+.category__list__item__detail {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 180px;
+    text-align: center;
+}
+
+.category__list__item__image {
+    position: absolute;
+    width: calc(100% - 250px);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.category__list__item.align-left .category__list__item__image {
+    right: 30px;
+}
+
+.category__list__item.align-right .category__list__item__image {
+    left: 30px;
+}
+
+.category__list__item__image.living-room {
+    background-image: url('./../images/categories/sofa-p.png');
+    background-position: center right;
+}
+
+.category__list__item__image.kitchen {
+    background-image: url('./../images/categories/chair-p.png');
+    background-size: cover;
+}
+
+.category__list__item__image.bedroom {
+    background-image: url('./../images/categories/bed-p.png');
+}
+
+.category__list__item__image.accessories {
+    background-image: url('./../images/categories/access-p.png');
+}
+
+.category__list__item__image.bathroom {
+    background-image: url('./../images/categories/wardrobe-p.png');
+    background-size: contain;
+    width: calc(100% - 250px);
+}
+
+.category__list__item__image.office {
+    background-image: url('./../images/categories/chair2-p.png');
+    background-size: contain;
+    background-position: bottom center;
+}
+
+.category__list__item__image.lightning {
+    background-image: url('./../images/categories/light-p.png');
+    background-size: contain;
+    background-position: top center;
+}
+
+.category__list__item__detail__title {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    padding-bottom: 15px;
+}
+
+.category__list__item__detail__button {
+    width: 140px;
+    background: #fff;
+    height: 40px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 1px 1px 6px 0 rgba(204, 204, 204, 0.8);
+}
+
+/* ::: CATEGORY CLASSES ENDS HERE ::: */
+
+
+/* ::: BRAND CLASSES STARTS HERE ::: */
+
+.brand {
+    padding-bottom: 60px;
+}
+
+.brand__title,
+.product__title {
+    text-align: center;
+    font-size: 27px;
+    letter-spacing: 0.03em;
+}
+
+.brand__sub-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    padding-top: 25px;
+    opacity: 0.5;
+}
+
+.brand__list {
+    height: 100px;
+    margin: 60px 0;
+    padding: 0 50px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    justify-content: space-between;
+}
+
+.brand__list__item {
+    height: 100%;
+    width: 200px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    /*border: 1px solid #ccc;*/
+    /*margin-right: 50px;*/
+}
+
+.brand__list__item__img {
+    width: 70%;
+    height: 100%;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+.brand__list__item.logo-1 .brand__list__item__img {
+    background-image: url(./../images/brand/logo-1.png);
+}
+
+.brand__list__item.logo-2 .brand__list__item__img {
+    background-image: url(./../images/brand/logo-2.png);
+}
+
+.brand__list__item.logo-3 .brand__list__item__img {
+    background-image: url(./../images/brand/logo-3.png);
+}
+
+.brand__list__item.logo-4 .brand__list__item__img {
+    background-image: url(./../images/brand/logo-4.png);
+}
+
+.brand__list__item.logo-5 .brand__list__item__img {
+    background-image: url(./../images/brand/logo-5.png);
+}
+
+.brand__list__item.logo-6 .brand__list__item__img {
+    background-image: url(./../images/brand/logo-6.png);
+}
+
+/* ::: BRAND CLASSES ENDS HERE ::: */
+
+
+/* ::: PRODUCT CLASSES STARTS HERE ::: */
+
+.product__category-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.product__category-nav__link {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin: 0 5px;
+    color: #333;
+    opacity: 0.5;
+}
+
+.product__category-nav__link.active {
+    color: #d5b07f;
+    opacity: 1;
+}
+
+.product__view__list {
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product__view__list__item {
+    width: 280px;
+    height: 350px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-bottom: 40px;
+}
+
+.product__view__list__item__img-sec {
+    height: calc(280px - 30px);
+    width: calc(100% - 30px);
+    margin: 15px;
+    border-radius: 4px;
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.product__view__list__item.p1 .product__view__list__item__img-sec {
+    background-image: url(./../images/products/p1.png);
+}
+
+.product__view__list__item.p2 .product__view__list__item__img-sec {
+    background-image: url(./../images/products/p2.png);
+}
+
+.product__view__list__item.p3 .product__view__list__item__img-sec {
+    background-image: url(./../images/products/p3.png);
+}
+
+.product__view__list__item.p4 .product__view__list__item__img-sec {
+    background-image: url(./../images/products/p4.png);
+}
+
+.product__view__list__item.p5 .product__view__list__item__img-sec {
+    background-image: url(./../images/products/p5.png);
+}
+
+.product__view__list__item.p6 .product__view__list__item__img-sec {
+    background-image: url(./../images/products/p6.png);
+}
+
+.product__view__list__item.p7 .product__view__list__item__img-sec {
+    background-image: url(./../images/products/p7.png);
+}
+
+
+.product__view__list__item__info-sec {
+    height: calc(100% - 280px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product__view__list__item__info-sec__category {
+    font-size: 12px;
+    opacity: 0.3;
+}
+
+.product__view__list__item__info-sec__name {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.product__view__list__item__info-sec__price {
+    font-size: 13px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* ::: PRODUCT CLASSES ENDS HERE ::: */
+
+
+/* ::: FOOTER CLASSES STARTS HERE ::: */
+
+.footer__col-left {
+    float: left;
+    height: 100%;
+    width: 500px;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.footer__col-right {
+    float: right;
+    height: 100%;
+    width: calc(100% - 500px);
+    position: relative;
+}
+
+.footer {
+    height: 400px;
+    background: #f5f5f5;
+    padding-top: 30px;
+}
+
+.footer__card {
+    width: calc(100% - 40px);
+    height: 125px;
+    border-radius: 2px;
+    background: #fff;
+    padding-left: 25px;
+}
+
+.footer__map {
+    width: calc(100% - 350px);
+    height: 280px;
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    background: #ccc;
+    border-radius: 2px;
+}
+
+.footer__address {
+    position: absolute;
+    width: 350px;
+    height: 180px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100px;
+    background-color: #ffffff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer__card__icon {
+    width: 60px;
+    height: 60px;
+    margin-top: 33px;
+    float: left;
+    border-radius: 50%;
+    border: 2px solid #d5b07f;
+}
+
+.footer__card__image {
+    width: 140px;
+    height: 100%;
+    float: left;
+}
+
+.footer__card__content {
+    float: left;
+    width: calc(100% - 200px);
+    height: 100%;
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer__card__content__title {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #d5b07f;
+}
+
+.footer__card__content__text {
+    font-size: 15px;
+    letter-spacing: 0.03em;
+    opacity: 0.7;
+    font-weight: 100;
+}
+
+span.footer__address__title {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    position: relative;
+    color: #d5b07f;
+}
+
+span.footer__address__title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background: #d5b07f;
+}
+
+p.footer__address__text {
+    font-size: 18px;
+    padding-top: 10px;
+    font-weight: 100;
+    line-height: 30px;
+}
+
+.footer__card__image.chair {
+    background: url(./../images/footer/chair.png) no-repeat bottom center;
+    background-size: contain;
+}
+
+.footer__card__image.wardrobe {
+    background: url(./../images/footer/wardrobe.png) no-repeat bottom center;
+    background-size: contain;
+}
+
+/* ::: FOOTER CLASSES ENDS HERE ::: */
