@@ -7,90 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NK FURNITURE</title>
 
+    <link rel="stylesheet" type="text/css" href="./stylesheets/unslider.css">
     <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./fonts/flaticon/flaticon.css">
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-    <script type="text/javascript">
-        // When the window has finished loading create our google map below
-        google.maps.event.addDomListener(window, 'load', init);
-
-        function init() {
-            // Basic options for a simple Google Map
-            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-            var mapOptions = {
-                // How zoomed in you want the map to start at (always required)
-                zoom: 11,
-
-                // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(40.6700, -73.9400), // New York
-
-                // How you would like to style the map.
-                // This is where you would paste any style found on Snazzy Maps.
-                styles: [
-                    {
-                        "featureType": "all",
-                        "stylers": [
-                            {
-                                "saturation": 0
-                            },
-                            {
-                                "hue": "#e7ecf0"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "road",
-                        "stylers": [
-                            {
-                                "saturation": -70
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "transit",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "poi",
-                        "stylers": [
-                            {
-                                "visibility": "off"
-                            }
-                        ]
-                    },
-                    {
-                        "featureType": "water",
-                        "stylers": [
-                            {
-                                "visibility": "simplified"
-                            },
-                            {
-                                "saturation": -60
-                            }
-                        ]
-                    }
-                ],
-            };
-
-            // Get the HTML DOM element that will contain your map
-            // We are using a div with id="map" seen below in the <body>
-            var mapElement = document.getElementById('map');
-
-            // Create the Google Map using our element and options defined above
-            var map = new google.maps.Map(mapElement, mapOptions);
-
-            // Let's also add a marker while we're at it
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(40.6700, -73.9400),
-                map: map,
-                title: 'Snazzy!',
-            });
-        }
-    </script>
+    <script type="text/javascript" src="./scripts/snazzy-maps-script.js"></script>
 
 </head>
 <body>
@@ -107,8 +29,34 @@
         </nav>
     </header>
 
-    <div class="banner">
+    <div class="banner" id="banner">
         <ul class="banner__slider">
+            <li class="banner__slider__item">
+                <div class="banner__hero-img"></div>
+                <div class="banner__content">
+                    <h1 class="banner__content__title">WELCOME TO OUR STORE</h1>
+                    <h2 class="banner__content__sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
+                        distinctio
+                        dolores doloribus eum inventore quae saepe tempore unde vero? Aperiam ea ex expedita fugiat
+                        nihil
+                        numquam quae quia ratione voluptatum!</h2>
+                    <button class="banner__content__button">VIEW MORE</button>
+                </div>
+            </li>
+
+            <li class="banner__slider__item">
+                <div class="banner__hero-img"></div>
+                <div class="banner__content">
+                    <h1 class="banner__content__title">WELCOME TO OUR STORE</h1>
+                    <h2 class="banner__content__sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum
+                        distinctio
+                        dolores doloribus eum inventore quae saepe tempore unde vero? Aperiam ea ex expedita fugiat
+                        nihil
+                        numquam quae quia ratione voluptatum!</h2>
+                    <button class="banner__content__button">VIEW MORE</button>
+                </div>
+            </li>
+
             <li class="banner__slider__item">
                 <div class="banner__hero-img"></div>
                 <div class="banner__content">
@@ -231,56 +179,140 @@
 
         <div class="product__view">
             <ul class="product__view__list">
-                <li class="product__view__list__item p1">
-                    <div class="product__view__list__item__img-sec"></div>
+                <li class="product__view__list__item">
+                    <div class="product-preview-list__wrapper" id="list-p1">
+                        <ul class="product__view__list__item__img-preview-list">
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p1"></div>
+                            </li>
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p1"></div>
+                            </li>
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p1"></div>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="product__view__list__item__info-sec">
                         <span class="product__view__list__item__info-sec__category">Bedroom</span>
                         <span class="product__view__list__item__info-sec__name">Furniture Name</span>
                         <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
                     </div>
                 </li>
-                <li class="product__view__list__item p2">
-                    <div class="product__view__list__item__img-sec"></div>
+                <li class="product__view__list__item">
+                    <div class="product-preview-list__wrapper" id="list-p2">
+                        <ul class="product__view__list__item__img-preview-list">
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p2"></div>
+                            </li>
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p2"></div>
+                            </li>
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p2"></div>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="product__view__list__item__info-sec">
                         <span class="product__view__list__item__info-sec__category">Bedroom</span>
                         <span class="product__view__list__item__info-sec__name">Furniture Name</span>
                         <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
                     </div>
                 </li>
-                <li class="product__view__list__item p3">
-                    <div class="product__view__list__item__img-sec"></div>
+                <li class="product__view__list__item">
+                    <div class="product-preview-list__wrapper" id="list-p3">
+                        <ul class="product__view__list__item__img-preview-list">
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p3"></div>
+                            </li>
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p3"></div>
+                            </li>
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p3"></div>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="product__view__list__item__info-sec">
                         <span class="product__view__list__item__info-sec__category">Bedroom</span>
                         <span class="product__view__list__item__info-sec__name">Furniture Name</span>
                         <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
                     </div>
                 </li>
-                <li class="product__view__list__item p4">
-                    <div class="product__view__list__item__img-sec"></div>
+                <li class="product__view__list__item">
+                    <div class="product-preview-list__wrapper" id="list-p4">
+                        <ul class="product__view__list__item__img-preview-list">
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p4"></div>
+                            </li>
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p4"></div>
+                            </li>
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p4"></div>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="product__view__list__item__info-sec">
                         <span class="product__view__list__item__info-sec__category">Bedroom</span>
                         <span class="product__view__list__item__info-sec__name">Furniture Name</span>
                         <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
                     </div>
                 </li>
-                <li class="product__view__list__item p5">
-                    <div class="product__view__list__item__img-sec"></div>
+                <li class="product__view__list__item">
+                    <div class="product-preview-list__wrapper" id="list-p5">
+                        <ul class="product__view__list__item__img-preview-list">
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p5"></div>
+                            </li>
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p5"></div>
+                            </li>
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p5"></div>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="product__view__list__item__info-sec">
                         <span class="product__view__list__item__info-sec__category">Bedroom</span>
                         <span class="product__view__list__item__info-sec__name">Furniture Name</span>
                         <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
                     </div>
                 </li>
-                <li class="product__view__list__item p6">
-                    <div class="product__view__list__item__img-sec"></div>
+                <li class="product__view__list__item">
+                    <div class="product-preview-list__wrapper" id="list-p6">
+                        <ul class="product__view__list__item__img-preview-list">
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p6"></div>
+                            </li>
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p6"></div>
+                            </li>
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p6"></div>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="product__view__list__item__info-sec">
                         <span class="product__view__list__item__info-sec__category">Bedroom</span>
                         <span class="product__view__list__item__info-sec__name">Furniture Name</span>
                         <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
                     </div>
                 </li>
-                <li class="product__view__list__item p7">
-                    <div class="product__view__list__item__img-sec"></div>
+                <li class="product__view__list__item">
+                    <div class="product-preview-list__wrapper" id="list-p7">
+                        <ul class="product__view__list__item__img-preview-list">
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p7"></div>
+                            </li>
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p7"></div>
+                            </li>
+                            <li class="product__view__list__item__img-preview-list__item">
+                                <div class="product__view__list__item__img-preview-list__item__img p7"></div>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="product__view__list__item__info-sec">
                         <span class="product__view__list__item__info-sec__category">Bedroom</span>
                         <span class="product__view__list__item__info-sec__name">Furniture Name</span>
@@ -292,10 +324,11 @@
     </div>
 
     <footer class="footer">
+        <h3 class="footer__heading">Contact Us</h3>
         <div class="footer__col-left">
 
             <div class="footer__card">
-                <div class="footer__card__icon"></div>
+                <div class="footer__card__icon flaticon-phone-receiver"></div>
                 <div class="footer__card__content">
                     <span class="footer__card__content__title">Call us on</span>
                     <span class="footer__card__content__text">(+91) 9900-123-123</span>
@@ -304,7 +337,7 @@
             </div>
 
             <div class="footer__card">
-                <div class="footer__card__icon"></div>
+                <div class="footer__card__icon flaticon-interface"></div>
                 <div class="footer__card__content">
                     <span class="footer__card__content__title">Send a message</span>
                     <span class="footer__card__content__text">contact@nkfurniture.com</span>
@@ -332,5 +365,23 @@
     </footer>
 
 </div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="./scripts/unslider.js"></script>
+<script>
+    $(function() {
+
+        $('#banner').unslider({
+            autoplay: true,
+            infinite: true
+        });
+
+        $('#list-p1, #list-p2, #list-p3, #list-p4, #list-p5, #list-p6, #list-p7').unslider({
+            autoplay: false,
+            infinite: true
+        });
+    });
+</script>
+
 </body>
 </html>
