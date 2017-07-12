@@ -36,6 +36,14 @@ li {
     list-style: none;
 }
 
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+    margin: 0;
+    font-size: 20px;
+}
+
 /* ::: RESET STYLES ENDS ::: */
 
 /* ::: COMMON CLASSES STARTS ::: */
