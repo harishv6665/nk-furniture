@@ -108,6 +108,10 @@ li {
     color: #d5b07f;
 }
 
+.header__button-nav {
+    display: none;
+}
+
 /* ::: HEADER CLASSES ENDS HERE ::: */
 
 /* ::: BANNER CLASSES STARTS HERE ::: */

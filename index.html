@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./stylesheets/unslider.css">
     <link rel="stylesheet" href="./fonts/flaticon/flaticon.css">
     <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/responsive.css">
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     <script type="text/javascript" src="./scripts/snazzy-maps-script.js"></script>
@@ -20,6 +21,13 @@
 
     <header class="header clearfix">
         <a href="#" class="header__logo fleft">NK FURNITURE</a>
+
+        <button class="header__button-nav fright">
+            <span class="header__button-nav__icon"></span>
+            <span class="header__button-nav__icon"></span>
+            <span class="header__button-nav__icon"></span>
+        </button>
+
         <nav class="header__nav fright">
             <a href="#" class="header__nav__link active">HOME</a>
             <a href="#" class="header__nav__link">ABOUT</a>
@@ -323,7 +331,7 @@
         </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer clearfix">
         <h3 class="footer__heading">Contact Us</h3>
         <div class="footer__col-left">
 
@@ -372,7 +380,7 @@
     $(function() {
 
         $('#banner').unslider({
-            autoplay: true,
+//            autoplay: true,
             infinite: true
         });
 
