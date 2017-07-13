@@ -21,7 +21,7 @@
     }
 
     .header__nav.expand {
-        height: 240px;
+        height: 200px;
     }
 
     .header__nav__link {
@@ -38,6 +38,7 @@
         margin-right: 25px;
         visibility: visible;
         opacity: 1;
+        transform: scale(1);
     }
 
     .banner {
@@ -218,7 +219,7 @@
     }
 
     .header__nav.expand {
-        height: 240px;
+        height: 200px;
     }
 
     .header__nav__link {
@@ -233,6 +234,7 @@
     .header__button-nav {
         visibility: visible;
         opacity: 1;
+        transform: scale(1);
     }
 
     .banner__hero-img {

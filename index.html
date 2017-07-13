@@ -22,18 +22,18 @@
     <header class="header clearfix">
         <a href="#" class="header__logo fleft">NK FURNITURE</a>
 
-        <button class="header__button-nav fright">
+        <button class="header__button-nav fright" id="m-nav-trigger">
             <span class="header__button-nav__icon"></span>
             <span class="header__button-nav__icon"></span>
             <span class="header__button-nav__icon"></span>
         </button>
 
-        <nav class="header__nav fright">
-            <a href="#" class="header__nav__link active">HOME</a>
-            <a href="#" class="header__nav__link">ABOUT</a>
-            <a href="#" class="header__nav__link">PRODUCTS</a>
-            <a href="#" class="header__nav__link">TESTIMONIALS</a>
-            <a href="#" class="header__nav__link">CONTACT US</a>
+        <nav class="header__nav fright" id="m-nav">
+            <a href="#banner" class="header__nav__link active">HOME</a>
+            <a href="#product" class="header__nav__link">PRODUCTS</a>
+            <a href="#brand" class="header__nav__link">BRANDS</a>
+            <!--<a href="#" class="header__nav__link">TESTIMONIALS</a>-->
+            <a href="#footer" class="header__nav__link">CONTACT US</a>
         </nav>
     </header>
 
@@ -86,7 +86,7 @@
         </nav>
     </div>
 
-    <div class="category">
+    <div class="category" id="category">
         <ul class="category__list">
             <li class="category__list__item w-65per align-left">
                 <div class="category__list__item__detail">
@@ -140,7 +140,7 @@
         </ul>
     </div>
 
-    <div class="brand">
+    <div class="brand" id="brand">
         <h3 class="brand__title">Our Brands</h3>
         <h4 class="brand__sub-title">A curated collection of high-quality furniture from finest makers</h4>
 
@@ -172,7 +172,7 @@
         </nav>
     </div>
 
-    <div class="product">
+    <div class="product" id="product">
         <h3 class="product__title">Featured Products</h3>
         <nav class="product__category-nav">
             <a href="#" class="product__category-nav__link active">All Categories</a>
@@ -331,7 +331,7 @@
         </div>
     </div>
 
-    <footer class="footer clearfix">
+    <footer class="footer clearfix" id="footer">
         <h3 class="footer__heading">Contact Us</h3>
         <div class="footer__col-left">
 
@@ -390,6 +390,7 @@
         });
     });
 </script>
+<script type="text/javascript" src="./scripts/custom.js"></script>
 
 </body>
 </html>

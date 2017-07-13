@@ -123,6 +123,7 @@ li {
     z-index: 9;
     visibility: hidden;
     opacity: 0;
+    transform: scale(0);
 }
 
 .header__button-nav__icon {
