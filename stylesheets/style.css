@@ -109,7 +109,27 @@ li {
 }
 
 .header__button-nav {
-    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px 0;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    z-index: 9;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.header__button-nav__icon {
+    width: 34px;
+    height: 4px;
+    background: #d5b07f;
+    flex-shrink: 0;
 }
 
 /* ::: HEADER CLASSES ENDS HERE ::: */
