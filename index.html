@@ -14,9 +14,10 @@
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     <script type="text/javascript" src="./scripts/snazzy-maps-script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
 </head>
-<body>
+<body ng-app="myApp" ng-controller="myCtrl">
 <div class="page-wrapper">
 
     <header class="header clearfix">
@@ -174,161 +175,186 @@
 
     <div class="product" id="product">
         <h3 class="product__title">Featured Products</h3>
-        <nav class="product__category-nav">
-            <a href="#" class="product__category-nav__link active">All Categories</a>
-            <a href="#" class="product__category-nav__link">Living Room</a>
-            <a href="#" class="product__category-nav__link">Kitchen & Dining Room</a>
-            <a href="#" class="product__category-nav__link">Bedroom</a>
-            <a href="#" class="product__category-nav__link">Accessories</a>
-            <a href="#" class="product__category-nav__link">Bathroom</a>
-            <a href="#" class="product__category-nav__link">Office</a>
-            <a href="#" class="product__category-nav__link">Lightning</a>
-        </nav>
+        <!--<nav class="product__category-nav">-->
+        <!--<a href="#" class="product__category-nav__link active">All Categories</a>-->
+        <!--<a href="#" class="product__category-nav__link">Living Room</a>-->
+        <!--<a href="#" class="product__category-nav__link">Kitchen & Dining Room</a>-->
+        <!--<a href="#" class="product__category-nav__link">Bedroom</a>-->
+        <!--<a href="#" class="product__category-nav__link">Accessories</a>-->
+        <!--<a href="#" class="product__category-nav__link">Bathroom</a>-->
+        <!--<a href="#" class="product__category-nav__link">Office</a>-->
+        <!--<a href="#" class="product__category-nav__link">Lightning</a>-->
+        <!--</nav>-->
 
         <div class="product__view">
             <ul class="product__view__list">
-                <li class="product__view__list__item">
-                    <div class="product-preview-list__wrapper" id="list-p1">
+                <li class="product__view__list__item" ng-repeat="item in categories[0].products">
+                    <div class="product-preview-list__wrapper" id={{$index}}-{{convertName(item.name)}}>
                         <ul class="product__view__list__item__img-preview-list">
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p1"></div>
+                            <li class="product__view__list__item__img-preview-list__item" ng-repeat="product in item.images">
+                                <div class="product__view__list__item__img-preview-list__item__img p1" style="background-image: url(./images/product-list/{{product}})"></div>
                             </li>
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p1"></div>
-                            </li>
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p1"></div>
-                            </li>
+                            <!--<li class="product__view__list__item__img-preview-list__item">-->
+                            <!--<div class="product__view__list__item__img-preview-list__item__img p1"></div>-->
+                            <!--</li>-->
+                            <!--<li class="product__view__list__item__img-preview-list__item">-->
+                            <!--<div class="product__view__list__item__img-preview-list__item__img p1"></div>-->
+                            <!--</li>-->
                         </ul>
                     </div>
                     <div class="product__view__list__item__info-sec">
-                        <span class="product__view__list__item__info-sec__category">Bedroom</span>
-                        <span class="product__view__list__item__info-sec__name">Furniture Name</span>
-                        <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
-                    </div>
-                </li>
-                <li class="product__view__list__item">
-                    <div class="product-preview-list__wrapper" id="list-p2">
-                        <ul class="product__view__list__item__img-preview-list">
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p2"></div>
-                            </li>
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p2"></div>
-                            </li>
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p2"></div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="product__view__list__item__info-sec">
-                        <span class="product__view__list__item__info-sec__category">Bedroom</span>
-                        <span class="product__view__list__item__info-sec__name">Furniture Name</span>
-                        <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
-                    </div>
-                </li>
-                <li class="product__view__list__item">
-                    <div class="product-preview-list__wrapper" id="list-p3">
-                        <ul class="product__view__list__item__img-preview-list">
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p3"></div>
-                            </li>
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p3"></div>
-                            </li>
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p3"></div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="product__view__list__item__info-sec">
-                        <span class="product__view__list__item__info-sec__category">Bedroom</span>
-                        <span class="product__view__list__item__info-sec__name">Furniture Name</span>
-                        <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
-                    </div>
-                </li>
-                <li class="product__view__list__item">
-                    <div class="product-preview-list__wrapper" id="list-p4">
-                        <ul class="product__view__list__item__img-preview-list">
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p4"></div>
-                            </li>
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p4"></div>
-                            </li>
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p4"></div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="product__view__list__item__info-sec">
-                        <span class="product__view__list__item__info-sec__category">Bedroom</span>
-                        <span class="product__view__list__item__info-sec__name">Furniture Name</span>
-                        <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
-                    </div>
-                </li>
-                <li class="product__view__list__item">
-                    <div class="product-preview-list__wrapper" id="list-p5">
-                        <ul class="product__view__list__item__img-preview-list">
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p5"></div>
-                            </li>
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p5"></div>
-                            </li>
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p5"></div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="product__view__list__item__info-sec">
-                        <span class="product__view__list__item__info-sec__category">Bedroom</span>
-                        <span class="product__view__list__item__info-sec__name">Furniture Name</span>
-                        <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
-                    </div>
-                </li>
-                <li class="product__view__list__item">
-                    <div class="product-preview-list__wrapper" id="list-p6">
-                        <ul class="product__view__list__item__img-preview-list">
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p6"></div>
-                            </li>
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p6"></div>
-                            </li>
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p6"></div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="product__view__list__item__info-sec">
-                        <span class="product__view__list__item__info-sec__category">Bedroom</span>
-                        <span class="product__view__list__item__info-sec__name">Furniture Name</span>
-                        <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
-                    </div>
-                </li>
-                <li class="product__view__list__item">
-                    <div class="product-preview-list__wrapper" id="list-p7">
-                        <ul class="product__view__list__item__img-preview-list">
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p7"></div>
-                            </li>
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p7"></div>
-                            </li>
-                            <li class="product__view__list__item__img-preview-list__item">
-                                <div class="product__view__list__item__img-preview-list__item__img p7"></div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="product__view__list__item__info-sec">
-                        <span class="product__view__list__item__info-sec__category">Bedroom</span>
-                        <span class="product__view__list__item__info-sec__name">Furniture Name</span>
-                        <span class="product__view__list__item__info-sec__price">Rs. 3400</span>
+                        <span class="product__view__list__item__info-sec__category">category</span>
+                        <span class="product__view__list__item__info-sec__name">{{item.name}}</span>
+                        <span class="product__view__list__item__info-sec__price">{{item.cost}}</span>
                     </div>
                 </li>
             </ul>
         </div>
+
+        <!--<div class="product__view">-->
+        <!--<ul class="product__view__list">-->
+        <!--<li class="product__view__list__item">-->
+        <!--<div class="product-preview-list__wrapper" id="list-p1">-->
+        <!--<ul class="product__view__list__item__img-preview-list">-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p1"></div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p1"></div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p1"></div>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="product__view__list__item__info-sec">-->
+        <!--<span class="product__view__list__item__info-sec__category">Bedroom</span>-->
+        <!--<span class="product__view__list__item__info-sec__name">Furniture Name</span>-->
+        <!--<span class="product__view__list__item__info-sec__price">Rs. 3400</span>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item">-->
+        <!--<div class="product-preview-list__wrapper" id="list-p2">-->
+        <!--<ul class="product__view__list__item__img-preview-list">-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p2"></div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p2"></div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p2"></div>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="product__view__list__item__info-sec">-->
+        <!--<span class="product__view__list__item__info-sec__category">Bedroom</span>-->
+        <!--<span class="product__view__list__item__info-sec__name">Furniture Name</span>-->
+        <!--<span class="product__view__list__item__info-sec__price">Rs. 3400</span>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item">-->
+        <!--<div class="product-preview-list__wrapper" id="list-p3">-->
+        <!--<ul class="product__view__list__item__img-preview-list">-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p3"></div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p3"></div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p3"></div>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="product__view__list__item__info-sec">-->
+        <!--<span class="product__view__list__item__info-sec__category">Bedroom</span>-->
+        <!--<span class="product__view__list__item__info-sec__name">Furniture Name</span>-->
+        <!--<span class="product__view__list__item__info-sec__price">Rs. 3400</span>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item">-->
+        <!--<div class="product-preview-list__wrapper" id="list-p4">-->
+        <!--<ul class="product__view__list__item__img-preview-list">-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p4"></div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p4"></div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p4"></div>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="product__view__list__item__info-sec">-->
+        <!--<span class="product__view__list__item__info-sec__category">Bedroom</span>-->
+        <!--<span class="product__view__list__item__info-sec__name">Furniture Name</span>-->
+        <!--<span class="product__view__list__item__info-sec__price">Rs. 3400</span>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item">-->
+        <!--<div class="product-preview-list__wrapper" id="list-p5">-->
+        <!--<ul class="product__view__list__item__img-preview-list">-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p5"></div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p5"></div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p5"></div>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="product__view__list__item__info-sec">-->
+        <!--<span class="product__view__list__item__info-sec__category">Bedroom</span>-->
+        <!--<span class="product__view__list__item__info-sec__name">Furniture Name</span>-->
+        <!--<span class="product__view__list__item__info-sec__price">Rs. 3400</span>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item">-->
+        <!--<div class="product-preview-list__wrapper" id="list-p6">-->
+        <!--<ul class="product__view__list__item__img-preview-list">-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p6"></div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p6"></div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p6"></div>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="product__view__list__item__info-sec">-->
+        <!--<span class="product__view__list__item__info-sec__category">Bedroom</span>-->
+        <!--<span class="product__view__list__item__info-sec__name">Furniture Name</span>-->
+        <!--<span class="product__view__list__item__info-sec__price">Rs. 3400</span>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item">-->
+        <!--<div class="product-preview-list__wrapper" id="list-p7">-->
+        <!--<ul class="product__view__list__item__img-preview-list">-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p7"></div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p7"></div>-->
+        <!--</li>-->
+        <!--<li class="product__view__list__item__img-preview-list__item">-->
+        <!--<div class="product__view__list__item__img-preview-list__item__img p7"></div>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="product__view__list__item__info-sec">-->
+        <!--<span class="product__view__list__item__info-sec__category">Bedroom</span>-->
+        <!--<span class="product__view__list__item__info-sec__name">Furniture Name</span>-->
+        <!--<span class="product__view__list__item__info-sec__price">Rs. 3400</span>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
     </div>
 
     <footer class="footer clearfix" id="footer">
@@ -339,7 +365,7 @@
                 <div class="footer__card__icon flaticon-phone-receiver"></div>
                 <div class="footer__card__content">
                     <span class="footer__card__content__title">Call us on</span>
-                    <span class="footer__card__content__text">(+91) 9900-123-123</span>
+                    <span class="footer__card__content__text">(+91) 8880-777-222</span>
                 </div>
                 <div class="footer__card__image wardrobe"></div>
             </div>
@@ -348,7 +374,7 @@
                 <div class="footer__card__icon flaticon-interface"></div>
                 <div class="footer__card__content">
                     <span class="footer__card__content__title">Send a message</span>
-                    <span class="footer__card__content__text">contact@nkfurniture.com</span>
+                    <span class="footer__card__content__text">nahid@nkfurnitureonline.com</span>
                 </div>
                 <div class="footer__card__image chair"></div>
             </div>
@@ -367,7 +393,11 @@
             <div class="footer__map" id="map"></div>
             <div class="footer__address">
                 <span class="footer__address__title">NK FURNITURE</span>
-                <p class="footer__address__text">#3, lorem complex, 2nd main, 80th cross, bangalore 560-034</p>
+                <p class="footer__address__text">
+                    #16, 100 feet ring road, Next to Kalyani Motors,
+                    Mysore Road Junction, Panatharapalya,
+                    Nayandanahalli, Bangalore - 560039
+                </p>
             </div>
         </div>
     </footer>
@@ -375,20 +405,130 @@
 </div>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.convertName = function(name) {
+            return name.split(' ').join('_');
+        };
+        $scope.categories = [
+            {
+                name: 'category_name',
+                products: [
+                    {
+                        name: 'cabinet',
+                        cost: '12345',
+                        images: [
+                            'cabinet-cat1-img1.jpeg',
+                            'cabinet-cat1-img2.jpeg',
+                            'cabinet-cat1-img3.jpeg',
+                        ],
+                    },
+                    {
+                        name: 'chair 1',
+                        cost: '12345',
+                        images: [
+                            'chair-cat1-img1.jpeg',
+                            'chair-cat1-img2.jpeg',
+                            'chair-cat1-img3.jpeg',
+                            'chair-cat1-img4.jpeg',
+                            'chair-cat1-img5.jpeg',
+                        ],
+                    },
+                    {
+                        name: 'chair 2',
+                        cost: '12345',
+                        images: [
+                            'chair-cat2-img1.jpeg',
+                            'chair-cat2-img2.jpeg',
+                            'chair-cat2-img3.jpeg',
+                            'chair-cat2-img4.jpeg',
+                        ],
+                    },
+                    {
+                        name: 'chair 3',
+                        cost: '12345',
+                        images: [
+                            'chair-cat3-img1.jpeg',
+                            'chair-cat3-img2.jpeg',
+                            'chair-cat3-img3.jpeg',
+                            'chair-cat3-img4.jpeg',
+                        ],
+                    },
+                    {
+                        name: 'dewaan 1',
+                        cost: '12345',
+                        images: [
+                            'dewaan-cat1-img1.jpeg',
+                            'dewaan-cat1-img2.jpeg',
+                            'dewaan-cat1-img3.jpeg',
+                            'dewaan-cat1-img4.jpeg',
+                            'dewaan-cat1-img5.jpeg',
+                        ],
+                    },
+                    {
+                        name: 'dewaan 2',
+                        cost: '12345',
+                        images: [
+                            'dewaan-cat2-img1.jpeg',
+                            'dewaan-cat2-img2.jpeg',
+                            'dewaan-cat2-img3.jpeg',
+                            'dewaan-cat2-img4.jpeg',
+                            'dewaan-cat2-img5.jpeg',
+                        ],
+                    },
+                    {
+                        name: 'table 1',
+                        cost: '12345',
+                        images: [
+                            'tabel-cat1-img1.jpeg',
+                        ],
+                    },
+                    {
+                        name: 'table 2',
+                        cost: '12345',
+                        images: [
+                            'tabel-cat2-img1.jpeg',
+                        ],
+                    },
+                    {
+                        name: 'wardrobe',
+                        cost: '12345',
+                        images: [
+                            'wardrobe-cat1-img1.jpeg',
+                            'wardrobe-cat1-img2.jpeg',
+                            'wardrobe-cat1-img3.jpeg',
+                            'wardrobe-cat1-img4.jpeg',
+                            'wardrobe-cat1-img5.jpeg',
+                        ],
+                    },
+                ],
+            },
+        ];
+    });
+</script>
+
 <script type="text/javascript" src="./scripts/unslider.js"></script>
 <script>
     $(function() {
 
-        $('#banner').unslider({
+            $('#banner').unslider({
 //            autoplay: true,
-            infinite: true
-        });
+                infinite: true,
+            });
 
-        $('#list-p1, #list-p2, #list-p3, #list-p4, #list-p5, #list-p6, #list-p7').unslider({
-            autoplay: false,
-            infinite: true
-        });
-    });
+            var productList = document.querySelectorAll('.product-preview-list__wrapper');
+
+            for (var i = 0; i < productList.length; i++) {
+                $('#' + productList[i].id).unslider({
+                    autoplay: false,
+                    infinite: true,
+                });
+            }
+
+        }
+    );
 </script>
 <script type="text/javascript" src="./scripts/custom.js"></script>
 

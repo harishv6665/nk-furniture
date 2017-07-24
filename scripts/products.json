@@ -1,0 +1,107 @@
+[
+    {
+        name: "category_name",
+        products: [
+            {
+                name: "cabinet",
+                cost: "12345",
+                images: [
+                    "cabinet-cat1-img1.jpeg",
+                    "cabinet-cat1-img2.jpeg",
+                    "cabinet-cat1-img3.jpeg"
+                ]
+            },
+            {
+                name: "chair 1",
+                cost: "12345",
+                images: [
+                    "chair-cat1-img1.jpeg",
+                    "chair-cat1-img2.jpeg",
+                    "chair-cat1-img3.jpeg",
+                    "chair-cat1-img4.jpeg",
+                    "chair-cat1-img5.jpeg",
+                ]
+            },
+            {
+                name: "chair 2",
+                cost: "12345",
+                images: [
+                    "chair-cat2-img1.jpeg",
+                    "chair-cat2-img2.jpeg",
+                    "chair-cat2-img3.jpeg",
+                    "chair-cat2-img4.jpeg",
+                ]
+            },
+            {
+                name: "chair 3",
+                cost: "12345",
+                images: [
+                    "chair-cat3-img1.jpeg",
+                    "chair-cat3-img2.jpeg",
+                    "chair-cat3-img3.jpeg",
+                    "chair-cat3-img4.jpeg",
+                ]
+            },
+            {
+                name: "dewaan 1",
+                cost: "12345",
+                images: [
+                    "dewaan-cat1-img1.jpeg",
+                    "dewaan-cat1-img2.jpeg",
+                    "dewaan-cat1-img3.jpeg",
+                    "dewaan-cat1-img4.jpeg",
+                    "dewaan-cat1-img5.jpeg",
+                ]
+            },
+            {
+                name: "dewaan 2",
+                cost: "12345",
+                images: [
+                    "dewaan-cat2-img1.jpeg",
+                    "dewaan-cat2-img2.jpeg",
+                    "dewaan-cat2-img3.jpeg",
+                    "dewaan-cat2-img4.jpeg",
+                    "dewaan-cat2-img5.jpeg",
+                ]
+            },
+            {
+                name: "table 1",
+                cost: "12345",
+                images: [
+                    "tabel-cat1-img1.jpeg",
+                ]
+            },
+            {
+                name: "table 2",
+                cost: "12345",
+                images: [
+                    "tabel-cat2-img1.jpeg",
+                ]
+            },
+            {
+                name: "wardrobe",
+                cost: "12345",
+                images: [
+                    "wardrobe-cat1-img1.jpeg",
+                    "wardrobe-cat1-img2.jpeg",
+                    "wardrobe-cat1-img3.jpeg",
+                    "wardrobe-cat1-img4.jpeg",
+                    "wardrobe-cat1-img5.jpeg",
+                ]
+            },
+        ]
+    }
+//    {
+//        name: "kitchen & dining",
+//        products: [
+//            {
+//                name: "chair",
+//                cost: "12345"
+//            },
+//            {
+//                name: "xyz",
+//                cost: "12345"
+//            },
+//        ]
+//    }
+]
