@@ -190,8 +190,8 @@
 
         <div class="product__view">
             <ul class="product__view__list">
-                <li class="product__view__list__item" ng-repeat="item in categories[0].products">
-                    <div class="product-preview-list__wrapper" id={{$index}}-{{convertName(item.name)}}>
+                <li class="product__view__list__item" ng-repeat="item in categories[0].products" title={{item.name}}>
+                    <div class="product-preview-list__wrapper" id={{$index}}-product>
                         <ul class="product__view__list__item__img-preview-list">
                             <li class="product__view__list__item__img-preview-list__item" ng-repeat="product in item.images">
                                 <div class="product__view__list__item__img-preview-list__item__img p1" style="background-image: url(./images/product-list/{{product}})"></div>
@@ -207,7 +207,7 @@
                     <div class="product__view__list__item__info-sec">
                         <span class="product__view__list__item__info-sec__category">category</span>
                         <span class="product__view__list__item__info-sec__name">{{item.name}}</span>
-                        <span class="product__view__list__item__info-sec__price">{{item.cost}}</span>
+                        <span class="product__view__list__item__info-sec__price">Rs {{item.cost}}</span>
                     </div>
                 </li>
             </ul>
@@ -419,8 +419,8 @@
                 name: 'category_name',
                 products: [
                     {
-                        name: 'cabinet',
-                        cost: '12345',
+                        name: '2 Door Cabinet',
+                        cost: 'xxxx',
                         images: [
                             'cabinet-cat1-img1.jpeg',
                             'cabinet-cat1-img2.jpeg',
@@ -428,8 +428,8 @@
                         ],
                     },
                     {
-                        name: 'chair 1',
-                        cost: '12345',
+                        name: 'Airport Visitor Chair [3 seater]',
+                        cost: '4,999',
                         images: [
                             'chair-cat1-img1.jpeg',
                             'chair-cat1-img2.jpeg',
@@ -439,8 +439,8 @@
                         ],
                     },
                     {
-                        name: 'chair 2',
-                        cost: '12345',
+                        name: 'Writing pad chairs (blue/black/meroon)',
+                        cost: '999',
                         images: [
                             'chair-cat2-img1.jpeg',
                             'chair-cat2-img2.jpeg',
@@ -449,8 +449,8 @@
                         ],
                     },
                     {
-                        name: 'chair 3',
-                        cost: '12345',
+                        name: 'Used office Chair [Aluminium bolt]',
+                        cost: '1,999',
                         images: [
                             'chair-cat3-img1.jpeg',
                             'chair-cat3-img2.jpeg',
@@ -459,8 +459,8 @@
                         ],
                     },
                     {
-                        name: 'dewaan 1',
-                        cost: '12345',
+                        name: 'Box deewan with storage [LxWxH - 72x30x18", 3 doors]',
+                        cost: '2,999',
                         images: [
                             'dewaan-cat1-img1.jpeg',
                             'dewaan-cat1-img2.jpeg',
@@ -470,8 +470,8 @@
                         ],
                     },
                     {
-                        name: 'dewaan 2',
-                        cost: '12345',
+                        name: 'Box deewan with storage [LxWxH - 72x30x18", 4 doors]',
+                        cost: '4,499',
                         images: [
                             'dewaan-cat2-img1.jpeg',
                             'dewaan-cat2-img2.jpeg',
@@ -481,22 +481,22 @@
                         ],
                     },
                     {
-                        name: 'table 1',
-                        cost: '12345',
+                        name: 'Conference table [2.5x5" vingi colour]',
+                        cost: '4,500',
                         images: [
                             'tabel-cat1-img1.jpeg',
                         ],
                     },
                     {
-                        name: 'table 2',
-                        cost: '12345',
+                        name: 'Table [3x6" Particle wood]',
+                        cost: '5,500',
                         images: [
                             'tabel-cat2-img1.jpeg',
                         ],
                     },
                     {
-                        name: 'wardrobe',
-                        cost: '12345',
+                        name: 'Wardrobe [LXWxH 72x32x18" 2 door, 2 shelves]',
+                        cost: '4,499',
                         images: [
                             'wardrobe-cat1-img1.jpeg',
                             'wardrobe-cat1-img2.jpeg',

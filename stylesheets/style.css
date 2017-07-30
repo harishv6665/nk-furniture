@@ -593,6 +593,11 @@ li {
     font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.03em;
+    width: calc(100% - 30px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
 }
 
 .product__view__list__item__info-sec__price {
